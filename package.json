@@ -1,0 +1,12 @@
+{
+  "description": "Make email design and development easier.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/drewtempelmeyer/gulp-email-boilerplate.git"
+  },
+  "devDependencies": {
+    "gulp-inline-css": "^0.2.7",
+    "gulp-litmus": "drewtempelmeyer/gulp-litmus",
+    "gulp-sass": "^0.7.3"
+  }
+}
