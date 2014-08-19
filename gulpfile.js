@@ -41,7 +41,7 @@ gulp.task('inline', ['sass'], function() {
 /**
  * Compile all of the SASS and html
 **/
-gulp.task('build', ['sass', 'inline']);
+gulp.task('build', ['inline']);
 
 /**
  * Submit your tests to Litmus
