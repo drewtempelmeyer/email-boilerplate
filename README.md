@@ -25,9 +25,7 @@ If you only wish to compile SCSS, run `gulp sass`.
 
 To only inline your CSS (and compile SCSS), you may run `gulp inline`.
 
-If you wish to update your SCSS and inline the CSS into your HTML as you update your code:
-
-`gulp watch`.
+If you wish to update your SCSS and inline the CSS into your HTML as you update your code: `gulp watch`.
 
 Your generated CSS will be output to **css/** and **build/css/**. The HTML file with inline styles will be output to **build/filename.html**.
 
