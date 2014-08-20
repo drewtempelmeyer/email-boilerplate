@@ -20,6 +20,7 @@ Included are two example files based on the billing template from [Mailgun Trans
 
 * **index.html** for your email layout
 * **sass/main.scss** for your SCSS stylesheet
+* **billing.haml** HAML example for creating HAML-based templates
 
 If you only wish to compile SCSS, run `gulp sass`.
 
