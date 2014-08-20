@@ -1,4 +1,4 @@
-# gulp-email-boilerplate
+# email-boilerplate
 
 Makes email design and development easier. Compile your SCSS, HAML, inline CSS, and easily test your email with [Litmus](https://litmus.com/).
 
@@ -10,7 +10,7 @@ Makes email design and development easier. Compile your SCSS, HAML, inline CSS, 
 
 First clone the repository or download as a ZIP archive.
 
-`git clone https://github.com/drewtempelmeyer/gulp-email-boilerplate.git`
+`git clone https://github.com/drewtempelmeyer/email-boilerplate.git`
 
 Then install all package dependencies
 
