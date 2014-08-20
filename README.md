@@ -1,6 +1,6 @@
 # gulp-email-boilerplate
 
-Makes email design and development easier. Compile your SCSS, inline CSS, and easily test your email with [Litmus](https://litmus.com/).
+Makes email design and development easier. Compile your SCSS, HAML, inline CSS, and easily test your email with [Litmus](https://litmus.com/).
 
 ### Requirements
 

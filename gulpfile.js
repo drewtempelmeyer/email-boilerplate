@@ -22,9 +22,9 @@ var litmusConfig = {
 **/
 gulp.task('sass', function() {
   return gulp.src('sass/*.scss')
-      .pipe(sass())
-      .pipe(gulp.dest('./css'))
-      .pipe(gulp.dest('./build/css'));
+             .pipe(sass())
+             .pipe(gulp.dest('./css'))
+             .pipe(gulp.dest('./build/css'));
 });
 
 /**
@@ -33,7 +33,7 @@ gulp.task('sass', function() {
 gulp.task('haml', function() {
   return gulp.src('./*.haml')
              .pipe(haml())
-             .pipe(gulp.dest('./'));
+             .pipe(gulp.dest('./build/'));
 });
 
 /**
@@ -41,11 +41,11 @@ gulp.task('haml', function() {
 **/
 gulp.task('inline', ['sass', 'haml'], function() {
   return gulp.src('./*.html')
-      .pipe(inlineCss({
-        applyStyleTags: true,
-        applyLinkTags: true
-      }))
-      .pipe(gulp.dest('./build'));
+             .pipe(inlineCss({
+                applyStyleTags: true,
+                applyLinkTags: true
+             }))
+             .pipe(gulp.dest('./build'));
 });
 
 /**
@@ -58,7 +58,7 @@ gulp.task('build', ['inline']);
 **/
 gulp.task('test', function() {
   return gulp.src('./build/*.html')
-      .pipe(litmus(litmusConfig));
+             .pipe(litmus(litmusConfig));
 });
 
 /**
