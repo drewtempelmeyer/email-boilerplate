@@ -1,6 +1,7 @@
 var gulp = require('gulp'),
     inlineCss = require('gulp-inline-css'),
     sass = require('gulp-sass'),
+    haml = require('gulp-haml'),
     litmus = require('gulp-litmus');
 
 var litmusConfig = {
@@ -27,9 +28,18 @@ gulp.task('sass', function() {
 });
 
 /**
+ * Compile HAML to HTML and copy to build/
+**/
+gulp.task('haml', function() {
+  return gulp.src('./*.haml')
+             .pipe(haml())
+             .pipe(gulp.dest('./'));
+});
+
+/**
  * Place all CSS inline and copy html files to build/
 **/
-gulp.task('inline', ['sass'], function() {
+gulp.task('inline', ['sass', 'haml'], function() {
   return gulp.src('./*.html')
       .pipe(inlineCss({
         applyStyleTags: true,
@@ -56,5 +66,5 @@ gulp.task('test', function() {
 **/
 gulp.task('watch', function() {
   gulp.watch('./sass/*.scss', ['sass']);
-  gulp.watch('./*.html', ['inline']);
+  gulp.watch('./*.h*ml', ['inline']);
 });
