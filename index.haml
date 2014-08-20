@@ -1,0 +1,61 @@
+!!!
+%html{:xmlns => "http://www.w3.org/1999/xhtml"}
+  %head
+    %meta{:content => "width=device-width", :name => "viewport"}/
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title Invoices or receipts
+    %link{:href => "css/main.css", :rel => "stylesheet"}/
+  %body
+    %table.body-wrap
+      %tr
+        %td
+        %td.container{:width => "600"}
+          .content
+            %table.main{:cellpadding => "0", :cellspacing => "0", :width => "100%"}
+              %tr
+                %td.content-wrap.aligncenter
+                  %table{:cellpadding => "0", :cellspacing => "0", :width => "100%"}
+                    %tr
+                      %td.content-block
+                        %h1 $33.98 Paid
+                    %tr
+                      %td.content-block
+                        %h2 Thanks for using Acme Inc.
+                    %tr
+                      %td.content-block
+                        %table.invoice
+                          %tr
+                            %td
+                              Lee Munroe
+                              %br>/
+                              Invoice #12345
+                              %br>/
+                              June 01 2014
+                          %tr
+                            %td
+                              %table.invoice-items{:cellpadding => "0", :cellspacing => "0"}
+                                %tr
+                                  %td Service 1
+                                  %td.alignright $ 19.99
+                                %tr
+                                  %td Service 2
+                                  %td.alignright $ 9.99
+                                %tr
+                                  %td Service 3
+                                  %td.alignright $ 4.00
+                                %tr.total
+                                  %td.alignright{:width => "80%"} Total
+                                  %td.alignright $ 33.98
+                    %tr
+                      %td.content-block
+                        %a{:href => "http://www.mailgun.com"} View in browser
+                    %tr
+                      %td.content-block
+                        Acme Inc. 123 Van Ness, San Francisco 94102
+            .footer
+              %table{:width => "100%"}
+                %tr
+                  %td.aligncenter.content-block
+                    Questions? Email
+                    %a{:href => "mailto:"} support@acme.inc
+        %td
