@@ -1,7 +1,7 @@
 var gulp = require('gulp'),
     inlineCss = require('gulp-inline-css'),
     sass = require('gulp-sass'),
-    haml = require('gulp-haml'),
+    haml = require('gulp-ruby-haml'),
     litmus = require('gulp-litmus');
 
 var litmusConfig = {
@@ -32,17 +32,19 @@ gulp.task('sass', function() {
 **/
 gulp.task('haml', function() {
   return gulp.src('./*.haml')
-             .pipe(haml())
-             .pipe(gulp.dest('./build/'));
+             .pipe(haml({
+               doubleQuote: true
+             }))
+             .pipe(gulp.dest('./build'));
 });
 
 /**
  * Place all CSS inline and copy html files to build/
 **/
 gulp.task('inline', ['sass', 'haml'], function() {
-  return gulp.src('./*.html')
+  return gulp.src(['./*.html', './build/*.html'])
              .pipe(inlineCss({
-                applyStyleTags: true,
+                applyStyleTags: false,
                 applyLinkTags: true
              }))
              .pipe(gulp.dest('./build'));
