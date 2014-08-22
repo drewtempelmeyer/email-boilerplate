@@ -5,6 +5,7 @@ Makes email design and development easier. Compile your SCSS, HAML, inline CSS, 
 ### Requirements
 
 * node
+* ruby
 
 ### How to use it
 
@@ -14,7 +15,7 @@ First clone the repository or download as a ZIP archive.
 
 Then install all package dependencies
 
-`npm install`
+`./install`
 
 Included are two example files based on the billing template from [Mailgun Transactional Email Templates](http://blog.mailgun.com/transactional-html-email-templates/)
 
