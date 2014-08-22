@@ -5,9 +5,10 @@
     "url": "https://github.com/drewtempelmeyer/gulp-email-boilerplate.git"
   },
   "devDependencies": {
-    "gulp-inline-css": "^0.2.7",
+    "gulp": "^3.8.7",
     "gulp-litmus": "drewtempelmeyer/gulp-litmus",
+    "gulp-premailer": "^0.3.0",
     "gulp-ruby-haml": "0.0.3",
-    "gulp-sass": "^0.7.3",
+    "gulp-sass": "^0.7.3"
   }
 }

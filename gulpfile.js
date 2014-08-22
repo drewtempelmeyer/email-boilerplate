@@ -1,5 +1,5 @@
 var gulp = require('gulp'),
-    inlineCss = require('gulp-inline-css'),
+    premailer = require('gulp-premailer'),
     sass = require('gulp-sass'),
     haml = require('gulp-ruby-haml'),
     litmus = require('gulp-litmus');
@@ -43,10 +43,7 @@ gulp.task('haml', function() {
 **/
 gulp.task('inline', ['sass', 'haml'], function() {
   return gulp.src(['./*.html', './build/*.html'])
-             .pipe(inlineCss({
-                applyStyleTags: false,
-                applyLinkTags: true
-             }))
+             .pipe(premailer())
              .pipe(gulp.dest('./build'));
 });
 
